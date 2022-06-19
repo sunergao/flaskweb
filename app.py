@@ -13,15 +13,15 @@ def inject_user():
     user = User.query.first()
     return dict(user=user)
 
-@app.route('/add', methods=['GET', 'POST'])
-def add():
-    if request.method == 'POST':
-        a = request.form.get('name_a')
-        b = request.form.get('name_b')
-        result = int(a) + int(b)
-    else:
-        result = '请输入a b以计算'
-    return render_template('add.html',result=result)
+# @app.route('/add', methods=['GET', 'POST'])
+# def add():
+#     if request.method == 'POST':
+#         a = request.form.get('name_a')
+#         b = request.form.get('name_b')
+#         result = int(a) + int(b)
+#     else:
+#         result = '请输入a b以计算'
+#     return render_template('add.html',result=result)
 
 ##路由
 @app.route('/')
