@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="title" onclick="handle()"><p>植被指数</p></div>
+
+    <div id="date">   
+            (北京时)日期:
+            年<input class="date1" type="text" id="year" autocomplete="off" onclick="Canlender.getYear($(this))"  />
+            月<input class="date1" type="text" id="month" autocomplete="off" onclick="Canlender.getMonth($(this))" />
+            <button id="select">查询</button>
+            <!-- 空格 -->
+            <span onclick="handle()">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</span>
+            <button id="prev">上一张</button>  
+            <button id="play">播放</button>
+            <button id="next">下一张</button>  
+    </div>
+
+    <div onclick="handle()">
+        <img alt="Demo PNG" class="demopng" id="img" src="{{ url_for('static', filename='images/2010_01.png') }}"/> 
+    </div>
+{% endblock %}

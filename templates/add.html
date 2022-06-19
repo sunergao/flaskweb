@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        <form action="/add" method="post">
+            a: <input type="text" name="name_a" ><br>
+            b: <input type="text" name="name_b" ><br>
+            <input type="submit" value="提交">
+            {{ result }}
+        <form>
+    </div>
+
+{% endblock %}
+

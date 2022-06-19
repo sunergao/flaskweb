@@ -1,0 +1,78 @@
+/* 页面整体 */
+body {
+    /*margin: auto;*/
+    /*max-width: 95%;*/
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+#myheader1 {
+    padding: 10px 30px 0px 15px;/*上右下左*/
+}
+
+#myheader2 {
+    font-size: 20px;
+    padding: 0px 30px 0px 15px;/*上右下左*/
+}
+
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:580px;
+    width:160px;
+    float:left;
+}
+
+#mydesc {
+    text-align: center;
+}
+
+#date {
+    margin-left: 200px;
+    height: 10px;
+}
+
+/* 页脚 */
+#indexfooter {
+    padding-bottom: 434px;
+}
+
+/* 页脚 */
+#footer {
+    color: #888;
+    padding: 5px;
+    text-align: center;
+}
+
+.link1 {
+    text-decoration: none; 
+}
+
+.link2 {
+    color:white;
+    text-decoration: none; 
+}
+
+.title {
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.date1 {
+    width: 155px;
+}
+
+.demopng {
+    display: block;
+    padding-top: 30px;
+    padding-left: 100px;
+    height: 68%;
+    width: 68%;
+}

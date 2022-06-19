@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user.name }}'s flaskweb</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/dateselect.js') }}"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/showimg.js') }}"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div id='header' onclick="handle()">
+        <h1><a class='link2' href="{{ url_for('index') }}">{{ user.name }}'s flaskweb</a></h1>
+    </div>
+
+    <div id='nav' onclick="handle()">
+        <h2 id="myheader1">网格产品</h2>
+        <ul>
+            <!-- 这里的url_for链接的是视图函数ndvi(),返回的是路由/ndvi -->
+            <li><a class='link1' href="{{ url_for('ndvi') }}">植被指数NDVI</a> </li>
+            <li><a class='link1' href="{{ url_for('tem') }}">温度TEM</a> </li>
+            <li><a class='link1' href="{{ url_for('pre') }}">降水量PRE</a> </li>
+            <li><a class='link1' href="{{ url_for('pop') }}">人口密度POP</a> </li>
+            <li><a class='link1' href="{{ url_for('gdp') }}">国内生产总值GDP</a> </li>
+        </ul>  
+        <h3 id="myheader2"><a class='link1' href="{{ url_for('analy') }}">相关分析</a></h3> 
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <div id='footer'>
+        <small>&copy; 2022 <a href="http://github.com/sunergao">GitHub</a></small>
+    </div> 
+</body>
+</html>
